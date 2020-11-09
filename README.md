@@ -23,3 +23,16 @@ Untuk melakukan seeding ke database, kita perlu menjalankan perintah php artisan
 
 Setelah menjalankan semua perintah, kemudian akses localhost:8000/books untuk menyesuaikan 
 hasil dengan data yang disimpan pada database.
+
+CHALLANGE (MELANJUTKAN READ.ME)
+
+GET digunakan untuk mengambil data dari server di sumber daya yang ditentukan . Misalnya, kita memiliki API dengan /userstitik akhir. Membuat permintaan GET ke titik akhir itu akan menghasilkan daftar semua pengguna yang tersedia. Karena permintaan GET hanya meminta data dan tidak mengubah sumber daya apa pun, itu dianggap sebagai metode yang aman dan idempoten .
+
+POST digunakan untuk mengirim data ke server API untuk membuat atau menguduskan sumber daya. Data yang dikirim ke server disimpan di badan permintaan permintaan HTTP. Perlu diperhatikan bahwa POSTpermintaan tidak bersifat idempoten . Ini mengubah data di server backend (dengan membuat atau memperbarui sumber daya), berlawanan dengan GETpermintaan yang tidak mengubah data apa pun. 
+
+PUT digunakan untuk mengirim data ke API untuk memperbarui atau membuat sumber daya . Perbedaannya adalah bahwa permintaan PUT bersifat idempoten . Artinya, memanggil permintaan PUT yang sama beberapa kali akan selalu menghasilkan hasil yang sama . Sebaliknya, memanggil permintaan POST berulang kali memiliki efek samping dari pembuatan sumber daya yang sama beberapa kali. Umumnya, saat PUT membuat sumber daya, server akan merespons dengan 201( Created), dan jika permintaan mengubah sumber daya yang ada, server akan mengembalikan 200( OK) atau 204( No Content).
+
+Metode DELETE adalah menghapus sumber daya di URL tertentu . Metode ini adalah salah satu metode yang lebih umum di RESTful API. Jika pengguna baru dibuat dengan permintaan POST ke /users, dan itu dapat diambil dengan GETpermintaan ke /users/{{userid}}, maka membuat DELETEpermintaan untuk /users/{{userid}}akan menghapus pengguna itu sepenuhnya.
+
+
+
